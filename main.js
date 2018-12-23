@@ -833,6 +833,10 @@ phina.define('TitleScene',{
 			self.exit();
 		};
 
+		//クレジット表記
+		this.creditText = Label( '@SHOSASA3' ).addChildTo( this ).setPosition( this.gridX.center()+240,900 ).setScale( 0.5,0.5 );
+
+
 
 		//メインタイトル表示
 		this.maintitle = Sprite('maintitle',150,130).addChildTo( this );
@@ -1171,6 +1175,11 @@ phina.define('MainScene', {
 						self.r_titleSprite.tweener.fromJSON( TITLE_ANIMATION );
 
 					}
+					if( self.current_id >= ( MAX_NUM - 3 ) )
+					{
+						self.timerLabel.hide();	//残り3人になるとタイム表示を消す
+					}
+
 					if( self.current_id >= MAX_NUM )	//全部クリアしたら
 					//if( self.current_id >= 1 )	//テスト用1回クリアしたら
 
@@ -1488,7 +1497,7 @@ phina.define("ResultScene", {
 
 		//shareするデータ
 		var params = {
-			  hashtags: ["phina.js", "平ジェネ","平ジェネFOREVER"],	//ハッシュタグ
+			  hashtags: ["phina","平ジェネ","平ジェネFOREVER","20RKT"],	//ハッシュタグ
 			  url: phina.global.location && phina.global.location.href,
 		};
 		
