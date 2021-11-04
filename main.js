@@ -1497,7 +1497,7 @@ phina.define("ResultScene", {
 
 		//shareするデータ
 		var params = {
-			  hashtags: ["phina","平ジェネ","平ジェネFOREVER","平成ライダー20KicksTouch","ブラウザゲーム","HTML5game","indiegame"],	//ハッシュタグ
+			  hashtags: ["平成ライダー20KicksTouch","indiegame"],	//ハッシュタグ
 			  url: phina.global.location && phina.global.location.href,
 		};
 		
